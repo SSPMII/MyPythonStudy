@@ -1,6 +1,6 @@
 # _*_ coding: utf-8 _*_
 
-def findMinAndMax(L):
+def findMinAndMax(*L):
 	min = L[0]
 	max = L[0]
 	for x in L:
@@ -8,6 +8,7 @@ def findMinAndMax(L):
 			max = x
 		else:
 			min = x
+	print(min, max)
 	return (min, max)
 
 

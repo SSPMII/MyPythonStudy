@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
-def product(x,y):
-	return x * y
 
+def product(x,*y):
+    prod = x
+    for i in y:
+        prod = prod * i
+    return prod
 
 # 测试
 print('product(5) =', product(5))

@@ -1,4 +1,4 @@
-# _*_ coding=utf-8 _*_ 
+# _*_ coding: utf-8 _*_ 
 def move(n,a,b,c):
 	if n == 1:
 		print(a, '-->', c)

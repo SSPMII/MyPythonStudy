@@ -1,12 +1,16 @@
 # _*_ coding: utf-8 _*_
 
-def findMinAndMax(*L):
+def findMinAndMax(L):
+	if L == []:
+		min = None
+		max = None
+		return (min, max)
 	min = L[0]
 	max = L[0]
 	for x in L:
-		if x > max:
+		if x >= max:
 			max = x
-		else:
+		elif x <= min:
 			min = x
 	print(min, max)
 	return (min, max)

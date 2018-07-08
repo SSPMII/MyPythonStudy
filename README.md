@@ -1,2 +1,3 @@
-# MyPythonStudy
-My pythin scripts
+# Python个人学习记录
+## 廖雪峰
+## 图灵学院免费课程

@@ -177,10 +177,44 @@
     - 不需要实例化
 - 案例04.py
 
+# 抽象类
+- 抽象方法:没有具体实现内容的方法
+- 意义:规范子类的行为和接口
+- 借助ABC模块
+```
+    import abc
+```
+- 抽象类:包含抽象方法的类,通常为abc类
+- 示例05.py   
+- 使用:
+    - 可以包含抽象方法,也可以包含具体方法
+    - 可以有方法也可以有属性
+    - 不允许直接实例化
+    - 必须继承才可以使用,且继承的子类必须实现继承来的所有抽象方法
+    - 若子类没有全部实现抽象方法,子类也不能被实例化
+    - 抽象类的作用主要是设定类的标准,以便于开发时具有统一的规范
+#定制类
+- type()
+    - 要创建一个class对象，type()函数依次传入3个参数：
 
+        -class的名称；
+        -继承的父类集合，注意Python支持多重继承，如果只有一个父类，别忘了tuple的单元素写法；
+        -class的方法名称与函数绑定
+        
+- MethodType
+- 元类:MetaClass
+```
+# metaclass是类的模板，所以必须从`type`类型派生：
+class ListMetaclass(type):
+    def __new__(cls, name, bases, attrs):
+        attrs['add'] = lambda self, value: self.append(value)
+        return type.__new__(cls, name, bases, attrs)
 
+class MyList(list, metaclass=ListMetaclass):
+    pass
 
-
+```
+- https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/0014319106919344c4ef8b1e04c48778bb45796e0335839000
 
 
 

@@ -20,4 +20,4 @@ print()
 for name in guests:
     print("Dear {0}, let's have dinner tonight".format(name.title()))
 del guests[:]
-print(guests)
+print(guests)   
